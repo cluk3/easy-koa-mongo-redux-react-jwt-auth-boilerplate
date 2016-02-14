@@ -1,0 +1,5 @@
+{
+  "verbose": false,
+  "ignore": ["./api/tests"],
+  "watch": ["./api", "./lib"]
+}
