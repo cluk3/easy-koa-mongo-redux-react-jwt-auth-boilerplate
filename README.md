@@ -48,6 +48,8 @@
 - [Mocha](http://mochajs.org/) - unit tests
 - [jsdom](https://github.com/tmpvar/jsdom) - vdom to test React without browser
 - [Chai](http://chaijs.com/) - assertion library
+- [material-ui](https://github.com/callemall/material-ui) - React Components that Implement Google's Material Design
+- [react-flexbox-grid](https://github.com/roylee0704/react-flexbox-grid) - React components implementing flexboxgrid
 - A bunch of useful scripts
 
 ## Scripts
@@ -89,5 +91,6 @@ Every kind of contribution, critic, feedback or bug report is highly appreciated
 
 ---
 
-I've taken lot of code from here: https://github.com/mezod/boilerplate-koa-redux-react
+I've taken lot of code from here: https://github.com/mezod/boilerplate-koa-redux-react .
+
 Thanks to mezod for the inspiring repo :)

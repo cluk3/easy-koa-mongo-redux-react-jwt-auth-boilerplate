@@ -2,7 +2,6 @@ import React from 'react';
 import TextField from 'material-ui/lib/text-field';
 import RaisedButton from 'material-ui/lib/raised-button';
 import ContentSend from 'material-ui/lib/svg-icons/content/send';
-import ErrorMsg from './ErrorMsg';
 import Row from 'react-flexbox-grid/lib/components/Row';
 import Col from 'react-flexbox-grid/lib/components/Col';
 import fetch from 'isomorphic-fetch';
@@ -24,7 +23,6 @@ const ChangePassword = React.createClass({
         value: '',
         error: ''
       },
-      disabled: true,
       isFetching: false
     };
   },
@@ -102,17 +100,17 @@ const ChangePassword = React.createClass({
       );
   },
 
+  isDisabled() {
+    const { oldPassword, newPassword, pswConfirm } = this.state;
+    return !(oldPassword && newPassword && pswConfirm.value && !pswConfirm.error);
+  },
+
   render() {
     const {oldPassword, newPassword, pswConfirm} = this.state;
     return (
       <Row style = {{height: '60vh'}} center='xs' middle = 'xs'>
         <Col xs = {6}>
           <h1>Change Password</h1>
-          <Row center='xs' middle = 'xs'>
-            <Col xs = {3}>
-              <ErrorMsg errors = {this.state.errors}/>
-            </Col>
-          </Row>
             <form onSubmit = {
               (e) => {
                 e.preventDefault();
@@ -151,8 +149,7 @@ const ChangePassword = React.createClass({
               <RaisedButton
                 type='submit'
                 label = 'Submit'
-                disabled = {!!pswConfirm.error}
-                // i know it's a code smell, have to figure out how to change it
+                disabled = {this.isDisabled()}
                 labelPosition = 'before'
                 icon = {<ContentSend />} />
             </form>

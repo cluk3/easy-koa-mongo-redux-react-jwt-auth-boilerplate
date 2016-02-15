@@ -41,7 +41,6 @@ export function fetchSignup(credentials) {
 
     const actionLink = 'http://localhost:3000/signup';
     const fetchOpts =  {
-      credentials: 'include',
       method: 'post',
       headers: {
         'Accept': 'application/json',
