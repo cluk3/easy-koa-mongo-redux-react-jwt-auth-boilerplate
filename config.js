@@ -16,7 +16,7 @@ var specific = {
   development: {
     app: {
       port: 3000,
-      name: "Koa React Mongoose Mocha - Dev",
+      name: "Easy React Boilerplate - Dev",
       keys: [ "super-secret-hurr-durr" ],
       host: "localhost",
       cookies: {
@@ -29,13 +29,13 @@ var specific = {
       },
     },
     mongo: {
-      url: "mongodb://localhost/votingapp_dev",
+      url: "mongodb://localhost/erb_dev",
     },
   },
   test: {
     app: {
       port: 3001,
-      name: "Koa React Mongoose Mocha - Test realm",
+      name: "Easy React Boilerplate - Test",
       keys: [ "super-secret-hurr-durr" ],
       host: "localhost",
       cookies: {
@@ -48,13 +48,13 @@ var specific = {
       },
     },
     mongo: {
-      url: "mongodb://localhost/votingapp_test",
+      url: "mongodb://localhost/erb_test",
     },
   },
   production: {
     app: {
       port: process.env.PORT || 3000,
-      name: "Koa React Mongoose Mocha",
+      name: "Easy React Boilerplate",
       host: "production host",
       cookies: {
         opts: {
@@ -66,7 +66,7 @@ var specific = {
       }
     },
     mongo: {
-      url: "mongodb://localhost/votingapp",
+      url: "mongodb://localhost/erb",
     },
   },
 };
