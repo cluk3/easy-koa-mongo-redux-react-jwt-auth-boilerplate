@@ -9,7 +9,7 @@ const NavHeader = ({isAuthenticated, onLogoutClick, linkTo}) => {
 
   return (
     <AppBar
-    title = {<span>VotingApp</span>}
+    title = {<span>Easy Boilerplate</span>}
     showMenuIconButton = {false}
     iconElementRight={
       <IconMenu
