@@ -4,12 +4,13 @@ import IconButton from 'material-ui/lib/icon-button';
 import IconMenu from 'material-ui/lib/menus/icon-menu';
 import MoreVertIcon from 'material-ui/lib/svg-icons/navigation/more-vert';
 import MenuItem from 'material-ui/lib/menus/menu-item';
+import config from '../../../config';
 
 const NavHeader = ({isAuthenticated, onLogoutClick, linkTo}) => {
 
   return (
     <AppBar
-    title = {<span>Easy Boilerplate</span>}
+    title = {<span>{config.app.name}</span>}
     showMenuIconButton = {false}
     iconElementRight={
       <IconMenu
